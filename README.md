@@ -63,17 +63,20 @@ My current AI focus is on understanding how to build useful applications around 
 
 ## Featured Projects
 
-### CloudNexus — AI Knowledge & Extraction Platform
+### CloudNexus — Multi-Service Knowledge Graph & Retrieval Platform
 
-**Python · Google Gemini / Vertex AI · Embeddings · Neo4j · Microservices**
+**Python · FastAPI · Google Gemini / Vertex AI · Embeddings · Neo4j · Docker**
 
-An evolving project exploring document understanding and knowledge graph construction.
+A multi-service project for working with technical documentation: ingesting source material, extracting knowledge, storing graph data and retrieving relevant context.
 
-- Experimenting with document extraction and entity identification.
-- Generating embeddings through local and Google AI provider implementations.
-- Persisting extracted entities and relationships in Neo4j.
-- Testing graph connectivity, embedding dimensions and persistence flows.
-- Exploring how extracted knowledge can support retrieval and downstream AI use cases.
+- Ingestion service experiments for document extraction and chunking.
+- Extraction service with provider-based knowledge extraction and embedding interfaces.
+- Google Gemini / Vertex AI integration for entity extraction and semantic embeddings.
+- Neo4j persistence for document chunks, entities and relationships.
+- Retrieval components for BM25 full-text search, vector similarity search and graph relationship lookup.
+- API services, validation and tests around ingestion, extraction and retrieval.
+
+The CloudNexus implementation is using the Google AI path for its current embedding workflow; provider adapters are kept modular for experimentation.
 
 [View CloudNexus repository](https://github.com/SwekcchaCornicle/cloudNexsus)
 
@@ -91,9 +94,19 @@ A hands-on repository for learning how stateful AI workflows and tool-using agen
 
 [View LangGraph repository](https://github.com/SwekcchaCornicle/langGraph)
 
-### ThoughtfullAI — AI Application Experiments
+### ThoughtfullAI — AI-Powered ThoughtSpace
 
-A repository for AI application development and related backend experiments.
+**Python · AWS Lambda · Amazon Bedrock · DynamoDB · S3 · API Gateway · AWS CDK · React**
+
+A cloud-based application for creating and exploring individual or collaborative thoughts, with AI-assisted classification and analysis.
+
+- Python Lambda backend with API routes for registration, login, thought creation, listing and analysis.
+- Amazon Bedrock Converse API for structured thought classification and on-demand analysis.
+- DynamoDB tables for user and post data.
+- S3, IAM, Secrets Manager, CloudWatch and API Gateway resources defined with AWS CDK.
+- React-based ThoughtSpace UI.
+
+This is a separate AWS Bedrock-based project in the profile; CloudNexus is the project where I am currently exploring Google Gemini / Vertex AI.
 
 [View ThoughtfullAI repository](https://github.com/SwekcchaCornicle/ThoughtfullAi)
 
